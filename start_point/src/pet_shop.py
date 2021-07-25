@@ -18,3 +18,15 @@ def increase_pets_sold(pet_shop, number_sold):
 
 def get_stock_count(pet_shop):
     return len(pet_shop["pets"])
+
+# this function works for breeds in our given list and breeds not in given list
+def get_pets_by_breed(pet_shop, breed):
+    all_pets = pet_shop["pets"]
+    found_pets = []
+
+    for pet in all_pets:
+        if pet["breed"] == breed:
+            found_pets.append(pet)
+        
+    return found_pets
+    
