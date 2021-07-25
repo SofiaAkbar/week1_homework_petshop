@@ -9,6 +9,7 @@ def get_total_cash(pet_shop):
 # function below works for both adding or removing cash
 def add_or_remove_cash(pet_shop, amount):
     pet_shop["admin"]["total_cash"] += amount
+    # get_total_cash(pet_shop) += amount
 
 def get_pets_sold(pet_shop):
     return pet_shop["admin"]["pets_sold"]
@@ -59,3 +60,13 @@ def get_customer_pet_count(customer):
 
 def add_pet_to_customer(customer, new_pet):
     customer["pets"].append(new_pet)
+
+# optional functions
+
+def customer_can_afford_pet(customer, pet):
+    # if customer["cash"] >= pet["price"]:
+    #     return True
+    # else:
+    #     return False
+    return customer["cash"] >= pet["price"]
+    
