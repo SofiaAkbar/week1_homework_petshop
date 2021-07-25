@@ -37,3 +37,10 @@ def find_pet_by_name(pet_shop, name):
     for pet in all_pets:
         if pet["name"] == name:
             return pet
+
+def remove_pet_by_name(pet_shop, name):
+    all_pets = pet_shop["pets"]
+
+    for pet in all_pets:
+        if pet["name"] == name:
+            all_pets.remove(pet)
