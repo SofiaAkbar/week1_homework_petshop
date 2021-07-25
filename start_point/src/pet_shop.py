@@ -29,4 +29,11 @@ def get_pets_by_breed(pet_shop, breed):
             found_pets.append(pet)
         
     return found_pets
+
+# this function will return none if there is no pet with the name given
+def find_pet_by_name(pet_shop, name):
+    all_pets = pet_shop["pets"]
     
+    for pet in all_pets:
+        if pet["name"] == name:
+            return pet
